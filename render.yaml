@@ -1,0 +1,33 @@
+services:
+  - type: worker
+    name: hype-detector-bot
+    env: python
+    region: frankfurt
+    plan: free
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: REDDIT_CLIENT_ID
+        sync: false
+      - key: REDDIT_CLIENT_SECRET
+        sync: false
+      - key: REDDIT_USER_AGENT
+        value: HypeDetector/2.0
+      - key: TWITTER_BEARER_TOKEN
+        sync: false
+      - key: ETHERSCAN_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.11.0
+
+databases:
+  - name: hype-detector-db
+    plan: free
+    databaseName: hypedetector
+    user: hypeuser
