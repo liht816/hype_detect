@@ -5,3 +5,4 @@ SQLAlchemy==2.0.46
 aiosqlite==0.19.0
 matplotlib==3.8.2
 pytrends
+beautifulsoup4
