@@ -4,6 +4,7 @@
 import logging
 from telegram import Update
 from telegram.ext import Application, ContextTypes
+from keep_alive import keep_alive  # <--- Добавить импорт
 
 from config import BOT_TOKEN
 from database.connection import init_db
@@ -79,3 +80,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    keep_alive()
