@@ -24,7 +24,7 @@ services:
       - key: DATABASE_URL
         sync: false
       - key: PYTHON_VERSION
-        value: 3.11.0
+        value: 3.10.13
 
 databases:
   - name: hype-detector-db
