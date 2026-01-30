@@ -6,3 +6,4 @@ aiosqlite==0.19.0
 matplotlib==3.8.2
 pytrends
 beautifulsoup4
+flask
